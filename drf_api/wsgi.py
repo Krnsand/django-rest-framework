@@ -7,10 +7,12 @@ For more information on this file, see
 https://docs.djangoproject.com/en/3.2/howto/deployment/wsgi/
 """
 
+import django
 import os
 
 from django.core.wsgi import get_wsgi_application
-
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'drf_api.settings')
+
+django.setup()
 
 application = get_wsgi_application()
